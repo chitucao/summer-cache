@@ -1,0 +1,2 @@
+一个基于spring-cache封装的二级缓存工具，轻量易用，支持原生的spring-cache注解
+一级缓存基于caffeine,二级缓存基于redis

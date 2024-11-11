@@ -6,7 +6,7 @@
 
     <groupId>top.chitucao.summerframework</groupId>
     <artifactId>summer-cache</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
 
@@ -14,9 +14,7 @@
     <url>https://github.com/chitucao/summer-cache</url>
     <description>
         多级缓存工具
-            -1.同程版本：ly分支，基于spring4.3.25
-
-
+        -a.同程版本：ly分支，基于spring4.3.25
 
     </description>
 
@@ -58,10 +56,57 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <lombok.version>1.18.12</lombok.version>
+        <tcbase.version>3.6.8</tcbase.version>
+        <springframework.verison>4.3.25.RELEASE</springframework.verison>
+        <caffeine.version>2.9.2</caffeine.version>
+        <spring.data.redis.version>1.8.23.RELEASE</spring.data.redis.version>
+        <paluch.lettuce.version>4.5.0.Final</paluch.lettuce.version>
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${springframework.verison}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine -->
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+            <version>${caffeine.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${spring.data.redis.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/biz.paluch.redis/lettuce -->
+        <dependency>
+            <groupId>biz.paluch.redis</groupId>
+            <artifactId>lettuce</artifactId>
+            <version>${paluch.lettuce.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.ly.tcbase</groupId>
+            <artifactId>cache</artifactId>
+            <version>${tcbase.version}</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
